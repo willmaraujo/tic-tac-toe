@@ -2,14 +2,14 @@
     <h2>Tic Tac Toe</h2>
 
     <!-- Initial Screen -->
-    <div calss="main">
-        <a href="#" class="button">
+    <div calss="main" *ngIf="showStart"> 
+        <a href="#" class="button" (click)="initGame()">
             Start
         </a>
     </div>
 
     <!-- Board -->
-    <div>
+    <div *ngIf="showBoard">
         <ul>
             <li class="kz-border-bottom kz-border-right"></li>
             <li class="kz-border-bottom kz-border-right"></li>
@@ -23,7 +23,7 @@
     </div>
 
     <!-- End Screen -->
-    <div>
+    <div *ngIf="showEnd">
         <span>
             <p>You win!</p>
             <p>You lost!</p>
