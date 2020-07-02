@@ -2,15 +2,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TicTacToeComponent } from './tic-tac-toe.component';
 
+import { TicTacToeService } from './shared/tic-tac-toe.service';
+
 describe('TicTacToeComponent', () => {
   let component: TicTacToeComponent;
   let fixture: ComponentFixture<TicTacToeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TicTacToeComponent ]
+      declarations: [TicTacToeComponent],
+      providers: [TicTacToeService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
